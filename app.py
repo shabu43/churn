@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request
-import joblib
+import pickle
 import numpy as np
 
-# Load the trained model (replace 'model.joblib' with your model file)
-model = joblib.load('model.joblib')
-
+# Load the trained model (replace 'model.pkl' with your model file)
+model = pickle.load(open('model.pkl', 'rb'))
 # Create Flask app
 app = Flask(__name__)
 
